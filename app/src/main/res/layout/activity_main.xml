@@ -1,39 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".MainActivity">
 
+
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo"/>
+
+    <EditText
+        android:id="@+id/MainEmail"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp"
+        android:hint=" Email*"
+        android:textColorHint="#ffffff"
+        android:background="@drawable/text_background"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:paddingLeft="10dp"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/MainPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:hint=" Password*"
+        android:textColorHint="#ffffff"
+        android:background="@drawable/text_background"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:paddingLeft="10dp"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/MainLoginBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="470dp"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_background"
+        android:text="Login"/>
+
     <TextView
+        android:id="@+id/MainForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Project Started"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="530dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/pwd"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/MainCreateBtn"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:text="Project Started"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="100dp"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="580dp"
+        android:text="Create Account"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:background="@drawable/button_background"/>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Project Started"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="500dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
