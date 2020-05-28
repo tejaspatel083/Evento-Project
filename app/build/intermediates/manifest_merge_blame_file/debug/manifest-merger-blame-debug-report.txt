@@ -10,46 +10,60 @@
 9        android:targetSdkVersion="29" />
 9-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml
 10
-11    <application
-11-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:5:5-22:19
-12        android:allowBackup="true"
-12-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:6:9-35
-13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.0.1] C:\Users\Tejas\.gradle\caches\transforms-2\files-2.1\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\core-1.0.1\AndroidManifest.xml:22:18-86
-14        android:debuggable="true"
-15        android:icon="@mipmap/ic_launcher"
-15-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:7:9-43
-16        android:label="@string/app_name"
-16-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:8:9-41
-17        android:roundIcon="@mipmap/ic_launcher_round"
-17-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:9:9-54
-18        android:supportsRtl="true"
-18-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:10:9-35
-19        android:theme="@style/AppTheme" >
-19-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:11:9-40
-20        <activity android:name="com.example.evento.HomePage" />
-20-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:12:9-55
-20-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:12:19-43
-21        <activity android:name="com.example.evento.ForgotPassword" />
-21-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:13:9-52
-21-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:13:19-49
-22        <activity android:name="com.example.evento.CreateAccount" />
-22-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:14:9-51
-22-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:14:19-48
-23        <activity android:name="com.example.evento.MainActivity" >
-23-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:15:9-21:20
-23-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:15:19-47
-24            <intent-filter>
-24-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:16:13-20:29
-25                <action android:name="android.intent.action.MAIN" />
-25-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:17:17-69
-25-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:17:25-66
-26
-27                <category android:name="android.intent.category.LAUNCHER" />
-27-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:19:17-77
-27-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:19:27-74
-28            </intent-filter>
-29        </activity>
-30    </application>
-31
-32</manifest>
+11    <uses-permission android:name="android.permission.VIBRATE" />
+11-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:5:5-66
+11-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:5:22-63
+12
+13    <application
+13-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:6:5-26:19
+14        android:allowBackup="true"
+14-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:7:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.0.1] C:\Users\Tejas\.gradle\caches\transforms-2\files-2.1\8f8ab13dc8f4e84e14a8bb3d9ac92bc4\core-1.0.1\AndroidManifest.xml:22:18-86
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:8:9-43
+18        android:label="@string/app_name"
+18-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:9:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:10:9-54
+20        android:supportsRtl="true"
+20-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:11:9-35
+21        android:testOnly="true"
+22        android:theme="@style/AppTheme" >
+22-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:12:9-40
+23        <activity
+23-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:13:9-14:50
+24            android:name="com.example.evento.HomePage"
+24-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:13:19-43
+25            android:label="Home Page" />
+25-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:14:13-38
+26        <activity
+26-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:15:9-16:46
+27            android:name="com.example.evento.ForgotPassword"
+27-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:15:19-49
+28            android:label="Forgot Password" />
+28-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:16:13-44
+29        <activity
+29-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:17:9-18:45
+30            android:name="com.example.evento.CreateAccount"
+30-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:17:19-48
+31            android:label="Create Account" />
+31-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:18:13-43
+32        <activity android:name="com.example.evento.MainActivity" >
+32-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:19:9-25:20
+32-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:19:19-47
+33            <intent-filter>
+33-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:20:13-24:29
+34                <action android:name="android.intent.action.MAIN" />
+34-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:21:17-69
+34-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:21:25-66
+35
+36                <category android:name="android.intent.category.LAUNCHER" />
+36-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:23:17-77
+36-->C:\Users\Tejas\Desktop\Evento Project\EventoProject\app\src\main\AndroidManifest.xml:23:27-74
+37            </intent-filter>
+38        </activity>
+39    </application>
+40
+41</manifest>

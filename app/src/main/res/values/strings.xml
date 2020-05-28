@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Evento</string>
-    <string name="pwd">Forgot Password?</string>
+    <string name="pwd"><u>Forgot Password?</u></string>
 </resources>
