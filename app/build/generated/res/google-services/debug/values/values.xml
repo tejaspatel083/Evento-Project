@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">480675642555-c1umgn2jlpni4rhfd2i447qp4ff6hh1n.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://evento-31203.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">480675642555</string>
+    <string name="google_api_key" translatable="false">AIzaSyDPCE08_FONDS1z0mCV9s1sLFhs0bI8YCk</string>
+    <string name="google_app_id" translatable="false">1:480675642555:android:934cce4a06b8ca237bbd9e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDPCE08_FONDS1z0mCV9s1sLFhs0bI8YCk</string>
+    <string name="google_storage_bucket" translatable="false">evento-31203.appspot.com</string>
+    <string name="project_id" translatable="false">evento-31203</string>
+</resources>

@@ -1,5 +1,6 @@
 package com.example.evento;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -15,12 +16,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
 
 
     private Button loginbtn,createbtn;
     private TextView forgotpwd;
     private EditText useremail,userpassword;
+    private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
 
     @Override
@@ -35,6 +43,20 @@ public class MainActivity extends AppCompatActivity {
         forgotpwd = (TextView)findViewById(R.id.MainForgotPassword);
         useremail = findViewById(R.id.MainEmail);
         userpassword = findViewById(R.id.MainPassword);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+
+
+        /*
+        if (firebaseUser != null)
+        {
+            finish();
+            startActivity(new Intent(MainActivity.this,HomePage.class));
+        }
+
+        */
 
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
@@ -69,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
                     progressDialog.show();
                     useremail.setError(null);
                     userpassword.setError(null);
-                    Intent i = new Intent(MainActivity.this,HomePage.class);
-                    startActivity(i);
+                    validate(useremail.getText().toString(),userpassword.getText().toString());
+
 
 
                 }
@@ -103,6 +125,63 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void validate(String userName,String userPassword)
+    {
+
+        firebaseAuth.signInWithEmailAndPassword(userName,userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+
+                if (task.isSuccessful())
+                {
+                    progressDialog.dismiss();
+                    checkEmailVerification();
+                }
+                else
+                {
+                    progressDialog.dismiss();
+                    //Toast.makeText(MainActivity.this,"Enter Valid Username and Password",Toast.LENGTH_LONG).show();
+                    Toast toast = Toast.makeText(MainActivity.this,"Enter Valid Email and Password",Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+                    toast.show();
+                }
+
+            }
+        });
+
+
+    }
+
+    private void checkEmailVerification()
+    {
+        progressDialog.setMessage("Logging in...");
+        progressDialog.show();
+
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        Boolean emailflag = firebaseUser.isEmailVerified();
+
+        if (emailflag)
+        {
+            progressDialog.dismiss();
+            //Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG).show();
+            Toast toast = Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+            toast.show();
+            startActivity(new Intent(MainActivity.this,HomePage.class));
+        }
+        else
+        {
+            progressDialog.dismiss();
+            //Toast.makeText(MainActivity.this,"Need to Verify Email",Toast.LENGTH_LONG).show();
+            Toast toast = Toast.makeText(MainActivity.this,"Need to Verify Email",Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+            toast.show();
+            firebaseAuth.signOut();
+        }
 
     }
 }
