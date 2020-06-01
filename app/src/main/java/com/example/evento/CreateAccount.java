@@ -1,19 +1,26 @@
 package com.example.evento;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.provider.MediaStore;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,20 +28,51 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.IOException;
 
 public class CreateAccount extends AppCompatActivity {
 
 
     private EditText user_name,user_email,user_age,user_phone,user_pwd1,user_pwd2;
+    private ImageView dpimage;
     private Button createbtn;
     private FirebaseAuth firebaseAuth;
+    private FirebaseStorage firebaseStorage;
+    private StorageReference storageReference;
     String name,email,password,repassword;
+    private static int PICK_IMAGE = 123;
+    private Uri imagePath;
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null)
+        {
+
+            imagePath = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imagePath);
+                dpimage.setImageBitmap(bitmap);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
+        dpimage = findViewById(R.id.DpImage);
         user_name = findViewById(R.id.CreateName);
         user_email = findViewById(R.id.CreateEmail);
         user_pwd1 = findViewById(R.id.CreatePassword);
@@ -42,6 +80,9 @@ public class CreateAccount extends AppCompatActivity {
         createbtn = findViewById(R.id.CreateBtn);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        firebaseStorage = FirebaseStorage.getInstance();
+
+        storageReference = firebaseStorage.getReference();
 
 
         createbtn.setOnClickListener(new View.OnClickListener() {
@@ -103,6 +144,22 @@ public class CreateAccount extends AppCompatActivity {
 
             }
         });
+
+
+        dpimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
+                vb.vibrate(20);
+
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"Choose Image"),PICK_IMAGE);
+            }
+        });
     }
 
     private  void sendEmailVerification()
@@ -143,7 +200,29 @@ public class CreateAccount extends AppCompatActivity {
     private void sendUserData()
     {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference reference = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference reference = firebaseDatabase.getReference().child("Users").child(firebaseAuth.getUid());
+
+        StorageReference imageReference = storageReference.child("User Profile Images").child(firebaseAuth.getUid());
+        UploadTask uploadTask = imageReference.putFile(imagePath);
+        uploadTask.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+
+
+                Toast toast = Toast.makeText(CreateAccount.this,"Upload Failed",Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+                toast.show();
+
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+
+
+            }
+        });
+
         UserProfile userProfile = new UserProfile(email,name);
         reference.setValue(userProfile);
     }

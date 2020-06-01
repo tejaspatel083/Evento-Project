@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Tejas\\Desktop\\Evento Project\\EventoProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Tejas\\.gradle\\caches\\transforms-2\\files-2.1\\75e70da198df93807ed751edcaee621f\\core-1.0.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Tejas\\.gradle\\caches\\transforms-2\\files-2.1\\331630a23dfa1f0594bcf54d5352aa36\\core-1.1.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Tejas\\.gradle\\caches\\transforms-2\\files-2.1\\322b93496bc0a8d8306a6c7db877b529\\appcompat-1.0.2\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Tejas\\.gradle\\caches\\transforms-2\\files-2.1\\fb8f7031ef66b8147647717c2aecca12\\appcompat-1.1.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

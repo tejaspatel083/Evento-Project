@@ -49,14 +49,14 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
 
-        /*
+
         if (firebaseUser != null)
         {
             finish();
             startActivity(new Intent(MainActivity.this,HomePage.class));
         }
 
-        */
+
 
 
         loginbtn.setOnClickListener(new View.OnClickListener() {
