@@ -3,6 +3,7 @@
     package="com.example.evento">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,12 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomePage"
-            android:label="Home Page"></activity>
-        <activity android:name=".ForgotPassword"
-            android:label="Forgot Password"/>
-        <activity android:name=".CreateAccount"
-            android:label="Create Account"/>
+        <activity android:name=".User_HomePage"></activity>
+        <activity
+            android:name=".HomePage"
+            android:label="Home Page" />
+        <activity
+            android:name=".ForgotPassword"
+            android:label="Forgot Password" />
+        <activity
+            android:name=".CreateAccount"
+            android:label="Create Account" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

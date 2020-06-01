@@ -1421,6 +1421,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gradient
 drawable ic_account_circle_black_24dp
+drawable ic_add_circle_black_24dp
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_edit_black_24dp
@@ -1465,6 +1466,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable selection_band_overlay
 drawable test_custom_background
 drawable text_background
 drawable tooltip_frame_dark
@@ -1685,6 +1687,7 @@ id mtrl_picker_title_text
 id multiply
 id nav_controller_view_tag
 id nav_host_fragment_container
+id navigation
 id navigation_header_container
 id never
 id noScroll
@@ -1734,6 +1737,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id selectimage
 id shortcut
 id showCustom
 id showHome
@@ -1799,6 +1803,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id user_drawer_layout
+id user_fragmentContainer
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
@@ -1872,6 +1878,7 @@ layout activity_create_account
 layout activity_forgot_password
 layout activity_home_page
 layout activity_main
+layout activity_user__home_page
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1954,6 +1961,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu drawer_menu
 menu option_menu
+menu user_drawer_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round

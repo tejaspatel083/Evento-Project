@@ -14,8 +14,8 @@
             android:title="Profile" />
         <item
             android:id="@+id/EventList"
-            android:icon="@drawable/ic_format_list_bulleted_black_24dp"
-            android:title="Event List" />
+            android:icon="@drawable/ic_add_circle_black_24dp"
+            android:title="Add Event" />
     </group>
 
 </menu>

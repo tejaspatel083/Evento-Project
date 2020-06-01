@@ -171,7 +171,18 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG);
             toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
             toast.show();
-            startActivity(new Intent(MainActivity.this,HomePage.class));
+
+            if (useremail.getText().toString().equalsIgnoreCase("tjp083@gmail.com"))
+            {
+
+                startActivity(new Intent(MainActivity.this,HomePage.class));
+
+            }
+            else
+            {
+                startActivity(new Intent(MainActivity.this,User_HomePage.class));
+            }
+
         }
         else
         {
