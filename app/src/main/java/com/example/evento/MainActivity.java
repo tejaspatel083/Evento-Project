@@ -50,10 +50,19 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        if (firebaseUser != null)
+        if (firebaseUser != null )
         {
-            finish();
-            startActivity(new Intent(MainActivity.this,HomePage.class));
+            if (firebaseUser.toString().equalsIgnoreCase("FyEtPU9zXzTB7wErv9LgCXCxXZa2"))
+            {
+                finish();
+                startActivity(new Intent(MainActivity.this,HomePage.class));
+            }
+            else {
+                finish();
+                startActivity(new Intent(MainActivity.this, User_HomePage.class));
+            }
+
+
         }
 
 

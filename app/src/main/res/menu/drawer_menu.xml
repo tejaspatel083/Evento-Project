@@ -13,7 +13,7 @@
             android:icon="@drawable/ic_account_circle_black_24dp"
             android:title="Profile" />
         <item
-            android:id="@+id/EventList"
+            android:id="@+id/AddEvent"
             android:icon="@drawable/ic_add_circle_black_24dp"
             android:title="Add Event" />
     </group>

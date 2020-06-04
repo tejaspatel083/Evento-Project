@@ -16,27 +16,63 @@
         android:background="@drawable/white_background"
         app:srcCompat="@drawable/ic_person_black_24dp"
         tools:ignore="VectorDrawableCompat" />
-    <TextView
+    <EditText
         android:id="@+id/ProfileName"
-        android:layout_width="380dp"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
         android:background="@drawable/text_background"
-        android:drawableLeft="@drawable/ic_account_circle_black_24dp"
-        android:paddingLeft="10dp"
-        android:textSize="15dp"
+        android:layout_toRightOf="@+id/emiltxt"
+        android:textSize="18dp"
+        android:textColor="#AC1C73"
+        android:layout_marginLeft="5dp"
         android:layout_centerHorizontal="true"
         android:padding="5dp"/>
+
+    <EditText
+        android:id="@+id/ProfileEmail"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/text_background"
+        android:textSize="18dp"
+        android:textColor="#AC1C73"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/emiltxt"
+        android:padding="5dp"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnupdate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:textColor="#AC1C73"
+        android:background="@drawable/button_background"
+        android:text="Update"
+        android:textSize="20dp"
+        />
 
     <TextView
-        android:id="@+id/ProfileEmail"
-        android:layout_width="380dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_email_black_24dp"
-        android:layout_marginTop="360dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/text_background"
-        android:textSize="15dp"
-        android:padding="5dp"/>
+        android:text="  Name : "
+        android:layout_marginTop="303dp"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:drawableLeft="@drawable/ic_account_circle_white_24dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
 
+    <TextView
+        android:id="@+id/emiltxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Email  : "
+        android:drawableLeft="@drawable/ic_email_white_24dp"
+        android:layout_marginTop="363dp"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"/>
 </RelativeLayout>

@@ -1,12 +1,16 @@
 package com.example.evento;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -24,12 +29,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 public class ProfileFragment extends Fragment {
 
     ImageView dp;
-    TextView user_name,user_email;
+    EditText user_name,user_email;
+    Button btn_update;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
@@ -51,6 +58,7 @@ public class ProfileFragment extends Fragment {
         dp = view.findViewById(R.id.ProfileImage);
         user_name = view.findViewById(R.id.ProfileName);
         user_email = view.findViewById(R.id.ProfileEmail);
+        btn_update = view.findViewById(R.id.btnupdate);
 
         DatabaseReference databaseReference = firebaseDatabase.getReference();
         DatabaseReference childreference = databaseReference.child("Users").child(firebaseAuth.getUid());
@@ -66,6 +74,8 @@ public class ProfileFragment extends Fragment {
         });
 
 
+
+
         childreference.addValueEventListener(new ValueEventListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -73,9 +83,10 @@ public class ProfileFragment extends Fragment {
 
                 UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
 
+
                 if (userProfile != null) {
-                    user_name.setText(" Name : "+userProfile.getUsername());
-                    user_email.setText(" Email : "+userProfile.getUseremail());
+                    user_name.setText("  "+userProfile.getUsername());
+                    user_email.setText("  "+userProfile.getUseremail());
                 }
                 else
                 {
@@ -93,6 +104,27 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        btn_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Vibrator vb = (Vibrator)   getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                vb.vibrate(20);
+
+                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                DatabaseReference reference = firebaseDatabase.getReference().child("Users").child(firebaseAuth.getUid());
+
+                String email = user_email.getText().toString().trim();
+                String name = user_name.getText().toString().trim();
+
+                UserProfile userProfile = new UserProfile(email,name);
+                reference.setValue(userProfile);
+
+                Toast toast = Toast.makeText(getActivity(),"Profile Updated",Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+                toast.show();
+            }
+        });
 
 
 

@@ -8,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +23,7 @@ public class User_HomePage extends AppCompatActivity {
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private FirebaseAuth firebaseAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,7 @@ public class User_HomePage extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.Home :
-                        fragment = new HomeFragment();
+                        fragment = new User_HomeFragment();
                         break;
 
                     case R.id.Profile :
@@ -63,7 +65,7 @@ public class User_HomePage extends AppCompatActivity {
                         break;
 
                     default:
-                        fragment = new HomeFragment();
+                        fragment = new User_HomeFragment();
                         break;
 
                 }

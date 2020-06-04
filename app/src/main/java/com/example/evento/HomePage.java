@@ -8,7 +8,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -64,8 +63,8 @@ public class HomePage extends AppCompatActivity {
                         fragment = new ProfileFragment();
                         break;
 
-                    case R.id.EventList :
-                        fragment = new EventListFragment();
+                    case R.id.AddEvent :
+                        fragment = new AddEventFragment();
                         break;
 
                         default:

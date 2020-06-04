@@ -94,7 +94,7 @@ public class CreateAccount extends AppCompatActivity {
                 vb.vibrate(20);
 
 
-                if (user_name.getText().toString().trim().length()==0 || user_email.getText().toString().trim().length()==0 || user_pwd1.getText().toString().trim().length()==0 || user_pwd2.getText().toString().trim().length()==0)
+                if (user_name.getText().toString().trim().length()==0 || user_email.getText().toString().trim().length()==0 || user_pwd1.getText().toString().trim().length()==0 || user_pwd2.getText().toString().trim().length()==0  || imagePath == null)
                 {
                     Toast toast = Toast.makeText(CreateAccount.this,"Enter All Details",Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
@@ -225,5 +225,7 @@ public class CreateAccount extends AppCompatActivity {
 
         UserProfile userProfile = new UserProfile(email,name);
         reference.setValue(userProfile);
+
+
     }
 }

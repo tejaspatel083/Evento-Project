@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+            <ImageView
+                android:id="@+id/Add_EventImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/ic_insert_photo_black_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="225dp"
+                android:textColorHint="#ffffff"
+                android:hint="Click to add image" />
+
+            <EditText
+                android:id="@+id/Add_EventName"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="280dp"
+                android:background="@drawable/text_background"
+                android:drawableLeft="@drawable/ic_event_black_24dp"
+                android:hint=" Event Name*"
+                android:textColor="#AC1C73"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/Add_EventHostName"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="340dp"
+                android:background="@drawable/text_background"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:hint=" Host Name*"
+                android:textColor="#AC1C73"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/Add_EventLocation"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="400dp"
+                android:background="@drawable/text_background"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:hint=" Location*"
+                android:textColor="#AC1C73"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/Add_EventDate"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="460dp"
+                android:background="@drawable/text_background"
+                android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                android:hint=" Event Date*"
+                android:textColor="#AC1C73"
+                android:inputType="date"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/Add_EventTime"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="520dp"
+                android:background="@drawable/text_background"
+                android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                android:hint=" Event Time*"
+                android:textColor="#AC1C73"
+                android:inputType="time"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/Add_EventCost"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="580dp"
+                android:background="@drawable/text_background"
+                android:drawableLeft="@drawable/ic_monetization_on_black_24dp"
+                android:hint=" Event Cost*"
+                android:textColor="#AC1C73"
+                android:inputType="text"
+                android:paddingLeft="10dp" />
+
+            <Button
+                android:id="@+id/Add_EventButton"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="655dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_background"
+                android:text="Add Event"
+                android:textSize="20dp"
+                android:textColor="#AC1C73"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recycler_view_try"
+                android:layout_below="@+id/Add_EventButton"/>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
