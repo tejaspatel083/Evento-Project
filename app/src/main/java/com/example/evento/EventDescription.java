@@ -54,7 +54,6 @@ public class EventDescription extends AppCompatActivity implements EventListAdap
         db = eventDBHelper.getWritableDatabase();
 
         String str = getIntent().getStringExtra("key");
-        Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
         //event.setText(str);
 
         mCursor = db.rawQuery("SELECT * FROM " + EventContract.EventEntry.TABLE_NAME + " where eventname = '" +str + "'" , null);

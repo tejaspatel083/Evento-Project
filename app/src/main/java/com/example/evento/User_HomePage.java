@@ -45,7 +45,7 @@ public class User_HomePage extends AppCompatActivity {
 
         if (savedInstanceState == null)
         {
-            getSupportFragmentManager().beginTransaction().replace(R.id.user_fragmentContainer,new HomeFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.user_fragmentContainer,new User_HomeFragment()).commit();
         }
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

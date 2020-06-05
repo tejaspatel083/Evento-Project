@@ -46,26 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-
-
-
-        if (firebaseUser != null )
-        {
-            if (firebaseUser.toString().equalsIgnoreCase("FyEtPU9zXzTB7wErv9LgCXCxXZa2"))
-            {
-                finish();
-                startActivity(new Intent(MainActivity.this,HomePage.class));
-            }
-            else {
-                finish();
-                startActivity(new Intent(MainActivity.this, User_HomePage.class));
-            }
-
-
-        }
-
-
 
 
         loginbtn.setOnClickListener(new View.OnClickListener() {

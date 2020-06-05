@@ -1,4 +1,4 @@
-#Fri Jun 05 14:32:17 EDT 2020
+#Fri Jun 05 16:33:19 EDT 2020
 base.0=C\:\\Users\\Tejas\\Desktop\\Evento Project\\Project\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
