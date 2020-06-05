@@ -39,10 +39,11 @@
                 android:layout_marginTop="280dp"
                 android:background="@drawable/text_background"
                 android:drawableLeft="@drawable/ic_event_black_24dp"
-                android:hint=" Event Name*"
+                android:hint="Event Name*"
                 android:textColor="#AC1C73"
                 android:inputType="text"
-                android:paddingLeft="10dp" />
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"/>
 
             <EditText
                 android:id="@+id/Add_EventHostName"
@@ -52,10 +53,11 @@
                 android:layout_marginTop="340dp"
                 android:background="@drawable/text_background"
                 android:drawableLeft="@drawable/ic_person_black_24dp"
-                android:hint=" Host Name*"
+                android:hint="Host Name*"
                 android:textColor="#AC1C73"
                 android:inputType="textPersonName"
-                android:paddingLeft="10dp" />
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"/>
 
             <EditText
                 android:id="@+id/Add_EventLocation"
@@ -65,10 +67,11 @@
                 android:layout_marginTop="400dp"
                 android:background="@drawable/text_background"
                 android:drawableLeft="@drawable/ic_location_on_black_24dp"
-                android:hint=" Location*"
+                android:hint="Location*"
                 android:textColor="#AC1C73"
                 android:inputType="text"
-                android:paddingLeft="10dp" />
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"/>
 
             <EditText
                 android:id="@+id/Add_EventDate"
@@ -78,10 +81,11 @@
                 android:layout_marginTop="460dp"
                 android:background="@drawable/text_background"
                 android:drawableLeft="@drawable/ic_date_range_black_24dp"
-                android:hint=" Event Date*"
+                android:hint="Event Date*"
                 android:textColor="#AC1C73"
                 android:inputType="date"
-                android:paddingLeft="10dp" />
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"/>
 
             <EditText
                 android:id="@+id/Add_EventTime"
@@ -91,10 +95,11 @@
                 android:layout_marginTop="520dp"
                 android:background="@drawable/text_background"
                 android:drawableLeft="@drawable/ic_access_time_black_24dp"
-                android:hint=" Event Time*"
+                android:hint="Event Time*"
                 android:textColor="#AC1C73"
                 android:inputType="time"
-                android:paddingLeft="10dp" />
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"/>
 
             <EditText
                 android:id="@+id/Add_EventCost"
@@ -104,10 +109,11 @@
                 android:layout_marginTop="580dp"
                 android:background="@drawable/text_background"
                 android:drawableLeft="@drawable/ic_monetization_on_black_24dp"
-                android:hint=" Event Cost*"
+                android:hint="Event Cost*"
                 android:textColor="#AC1C73"
                 android:inputType="text"
-                android:paddingLeft="10dp" />
+                android:paddingLeft="10dp"
+                android:drawablePadding="10dp"/>
 
             <Button
                 android:id="@+id/Add_EventButton"

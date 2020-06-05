@@ -16,7 +16,7 @@
         android:background="@drawable/white_background"
         app:srcCompat="@drawable/ic_person_black_24dp"
         tools:ignore="VectorDrawableCompat" />
-    <EditText
+    <TextView
         android:id="@+id/ProfileName"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         android:layout_centerHorizontal="true"
         android:padding="5dp"/>
 
-    <EditText
+    <TextView
         android:id="@+id/ProfileEmail"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
@@ -42,14 +42,14 @@
         android:padding="5dp"/>
 
     <Button
-        android:layout_width="150dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:id="@+id/btnupdate"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="450dp"
         android:textColor="#AC1C73"
         android:background="@drawable/button_background"
-        android:text="Update"
+        android:text="Update Profile"
         android:textSize="20dp"
         />
 

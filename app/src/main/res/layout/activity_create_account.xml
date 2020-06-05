@@ -32,12 +32,13 @@
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="230dp"
-        android:hint=" Name*"
+        android:hint="Name*"
         android:textColor="#AC1C73"
         android:textColorHint="#AC1C73"
         android:background="@drawable/text_background"
         android:drawableLeft="@drawable/ic_account_circle_black_24dp"
         android:paddingLeft="10dp"
+        android:drawablePadding="10dp"
         android:inputType="textPersonName"/>
     <EditText
         android:id="@+id/CreateEmail"
@@ -45,12 +46,13 @@
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="290dp"
-        android:hint=" Email*"
+        android:hint="Email*"
         android:textColor="#AC1C73"
         android:textColorHint="#AC1C73"
         android:background="@drawable/text_background"
         android:drawableLeft="@drawable/ic_email_black_24dp"
         android:paddingLeft="10dp"
+        android:drawablePadding="10dp"
         android:inputType="textEmailAddress"/>
     <EditText
         android:id="@+id/CreatePassword"
@@ -58,12 +60,13 @@
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="350dp"
-        android:hint=" Password*"
+        android:hint="Password*"
         android:textColor="#AC1C73"
         android:textColorHint="#AC1C73"
         android:background="@drawable/text_background"
         android:drawableLeft="@drawable/ic_lock_black_24dp"
         android:paddingLeft="10dp"
+        android:drawablePadding="10dp"
         android:inputType="textPassword"/>
     <EditText
         android:id="@+id/CreateRePassword"
@@ -71,12 +74,13 @@
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="410dp"
-        android:hint=" Confirm Password*"
+        android:hint="Confirm Password*"
         android:textColor="#AC1C73"
         android:textColorHint="#AC1C73"
         android:background="@drawable/text_background"
         android:drawableLeft="@drawable/ic_lock_black_24dp"
         android:paddingLeft="10dp"
+        android:drawablePadding="10dp"
         android:inputType="textPassword"/>
     <Button
         android:id="@+id/CreateBtn"

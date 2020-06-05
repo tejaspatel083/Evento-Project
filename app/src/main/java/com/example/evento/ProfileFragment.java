@@ -1,7 +1,9 @@
 package com.example.evento;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -35,8 +37,9 @@ import com.squareup.picasso.Picasso;
 public class ProfileFragment extends Fragment {
 
     ImageView dp;
-    EditText user_name,user_email;
+    TextView user_name,user_email;
     Button btn_update;
+    EditText edit_name,edit_email;
 
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
@@ -111,18 +114,48 @@ public class ProfileFragment extends Fragment {
                 Vibrator vb = (Vibrator)   getActivity().getSystemService(Context.VIBRATOR_SERVICE);
                 vb.vibrate(20);
 
-                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-                DatabaseReference reference = firebaseDatabase.getReference().child("Users").child(firebaseAuth.getUid());
 
-                String email = user_email.getText().toString().trim();
-                String name = user_name.getText().toString().trim();
 
-                UserProfile userProfile = new UserProfile(email,name);
-                reference.setValue(userProfile);
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-                Toast toast = Toast.makeText(getActivity(),"Profile Updated",Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
-                toast.show();
+                LayoutInflater layoutInflater = getActivity().getLayoutInflater();
+                View view = layoutInflater.inflate(R.layout.custom_dialog,null);
+
+                edit_name = view.findViewById(R.id.name_dialog);
+                edit_email = view.findViewById(R.id.email_dialog);
+
+                builder.setView(view).setTitle("Update Profile");
+
+                builder.setView(view).setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+
+                builder.setView(view).setPositiveButton("Update", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                                DatabaseReference reference = firebaseDatabase.getReference().child("Users").child(firebaseAuth.getUid());
+
+
+                                String name = edit_name.getText().toString().trim();
+                                String email = edit_email.getText().toString().trim();
+
+                                UserProfile userProfile = new UserProfile(email,name);
+                                reference.setValue(userProfile);
+
+
+                                Toast toast = Toast.makeText(getActivity(),"Profile Updated",Toast.LENGTH_LONG);
+                                toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+                                toast.show();
+
+                            }
+                        });
+
+                builder.show();
             }
         });
 
@@ -131,4 +164,6 @@ public class ProfileFragment extends Fragment {
         return view;
 
     }
+
+
 }

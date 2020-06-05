@@ -1389,6 +1389,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button_background
+drawable color_background
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1618,13 +1619,13 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
-id dialog_button
 id dimensions
 id direct
 id disableHome
 id drawer_layout
 id dropdown_menu
 id edit_query
+id email_dialog
 id emiltxt
 id end
 id end_padder
@@ -1716,6 +1717,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
 id my_card_view
+id name_dialog
 id nav_controller_view_tag
 id nav_host_fragment_container
 id navigation
