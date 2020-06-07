@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".EventDescription"></activity>
+        <activity android:name=".BookEvent"></activity>
+        <activity android:name=".EventDescription" />
         <activity android:name=".User_HomePage" />
         <activity
             android:name=".HomePage"

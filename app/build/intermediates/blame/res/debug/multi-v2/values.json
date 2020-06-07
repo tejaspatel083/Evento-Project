@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Project\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Evento\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Tejas\\.gradle\\caches\\transforms-2\\files-2.1\\c745cebae2a09d70496935aaac1bac2b\\navigation-ui-2.2.2\\res\\values\\values.xml",
@@ -76,22 +76,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Project\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Evento\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
                     "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "376"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,199,306,388,492,601,721,817",
+                        "endColumns": "143,106,81,103,108,119,95,72",
+                        "endOffsets": "194,301,383,487,596,716,812,885"
                     },
                     "to": {
-                        "startLines": "901",
-                        "startColumns": "4",
-                        "startOffsets": "62499",
-                        "endLines": "906",
-                        "endColumns": "12",
-                        "endOffsets": "62813"
+                        "startLines": "827,832,833,834,835,836,837,884",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "52363,52975,53082,53164,53268,53377,53497,61242",
+                        "endColumns": "143,106,81,103,108,119,95,72",
+                        "endOffsets": "52502,53077,53159,53263,53372,53492,53588,61310"
                     }
                 },
                 {
@@ -133,6 +131,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Evento\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "157,57,105",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "198,99,151"
+                    },
+                    "to": {
+                        "startLines": "236,237,238",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "12531,12577,12624",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "12572,12619,12670"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Tejas\\.gradle\\caches\\transforms-2\\files-2.1\\2423a3e8c7d595310e6661cc5002b018\\media-1.0.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,5,6,7,8,10,11,12,13,14",
@@ -147,6 +162,23 @@
                         "startOffsets": "17876,40512,40565,40618,40671,213915,214091,214213,214475,214670",
                         "endColumns": "88,52,52,52,52,65,121,60,65,66",
                         "endOffsets": "17960,40560,40613,40666,40719,213976,214208,214269,214536,214732"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Evento\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
+                    },
+                    "to": {
+                        "startLines": "292",
+                        "startColumns": "4",
+                        "startOffsets": "16450",
+                        "endColumns": "56",
+                        "endOffsets": "16502"
                     }
                 },
                 {
@@ -245,23 +277,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Project\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endColumns": "56",
-                        "endOffsets": "109"
-                    },
-                    "to": {
-                        "startLines": "292",
-                        "startColumns": "4",
-                        "startOffsets": "16450",
-                        "endColumns": "56",
-                        "endOffsets": "16502"
-                    }
-                },
-                {
                     "source": "C:\\Users\\Tejas\\.gradle\\caches\\transforms-2\\files-2.1\\6b4351a8fb7ff3bebd2f5bef251ea683\\transition-1.2.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -298,24 +313,26 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Project\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Evento\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "157,57,105",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "198,99,151"
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "376"
                     },
                     "to": {
-                        "startLines": "236,237,238",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "12531,12577,12624",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "12572,12619,12670"
+                        "startLines": "901",
+                        "startColumns": "4",
+                        "startOffsets": "62499",
+                        "endLines": "906",
+                        "endColumns": "12",
+                        "endOffsets": "62813"
                     }
                 },
                 {
-                    "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Project\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Evento\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "1,7,4,3,2",
                         "startColumns": "4,4,4,4,4",
@@ -405,23 +422,6 @@
                         "endLines": "4550,4557,4568,6664,6669",
                         "endColumns": "24,24,24,24,24",
                         "endOffsets": "302771,303156,303753,421116,421386"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Project\\app\\build\\generated\\res\\google-services\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,199,306,388,492,601,721,817",
-                        "endColumns": "143,106,81,103,108,119,95,72",
-                        "endOffsets": "194,301,383,487,596,716,812,885"
-                    },
-                    "to": {
-                        "startLines": "827,832,833,834,835,836,837,884",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "52363,52975,53082,53164,53268,53377,53497,61242",
-                        "endColumns": "143,106,81,103,108,119,95,72",
-                        "endOffsets": "52502,53077,53159,53263,53372,53492,53588,61310"
                     }
                 }
             ]

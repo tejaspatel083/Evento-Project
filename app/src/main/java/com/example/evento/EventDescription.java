@@ -3,9 +3,12 @@ package com.example.evento;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Vibrator;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +22,7 @@ public class EventDescription extends AppCompatActivity implements EventListAdap
     private Cursor mCursor;
     String yourValue;
     String name_event,name_host,location_event,date_event,time_event;
+    String pass_name,pass_cost;
     int cost_event;
     long id;
 
@@ -49,6 +53,9 @@ public class EventDescription extends AppCompatActivity implements EventListAdap
         date = findViewById(R.id.eventdate_detail);
         time = findViewById(R.id.eventtime_detail);
         cost = findViewById(R.id.eventcost_detail);
+        book_event_button = findViewById(R.id.Book_EventButton);
+
+
 
         EventDBHelper eventDBHelper = new EventDBHelper(this.getApplicationContext());
         db = eventDBHelper.getWritableDatabase();
@@ -92,7 +99,23 @@ public class EventDescription extends AppCompatActivity implements EventListAdap
 
 
 
+
         //itemView.setTag(id);
+        book_event_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
+                vb.vibrate(20);
+
+                Intent intent = new Intent(EventDescription.this,BookEvent.class);
+                intent.putExtra("name",name_event);
+                intent.putExtra("cost",String.valueOf(cost_event));
+                //Toast.makeText(EventDescription.this, name_event, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(mContext, cost_event, Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
+
 
     }
 

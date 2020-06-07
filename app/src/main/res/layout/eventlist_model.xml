@@ -9,7 +9,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
-        android:layout_height="420dp"
+        android:layout_height="380dp"
         android:layout_margin="20dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
@@ -90,23 +90,6 @@
             android:background="@drawable/gradient"
             android:layout_marginTop="320dp"
             android:layout_marginLeft="270dp"/>
-
-        <Button
-            android:layout_width="330dp"
-            android:layout_height="40dp"
-            android:id="@+id/event_bookbtn"
-            android:text="Book an event"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="370dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/gradient"
-            />
-
-
-
-
 
 
 
