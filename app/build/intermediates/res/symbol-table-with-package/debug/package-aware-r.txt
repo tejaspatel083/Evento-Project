@@ -1453,6 +1453,8 @@ drawable ic_person_black_24dp
 drawable ic_person_outline_black_24dp
 drawable ic_power_settings_new_black_24dp
 drawable ic_refresh_black_24dp
+drawable ic_visibility_black_24dp
+drawable ic_visibility_off_black_24dp
 drawable logo
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
@@ -1739,6 +1741,9 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id notvisible
+id notvisible1
+id notvisible2
 id nv
 id off
 id on
@@ -1857,6 +1862,8 @@ id user_drawer_layout
 id user_fragmentContainer
 id view_offset_helper
 id visible
+id visible1
+id visible2
 id visible_removing_fragment_view_tag
 id wide
 id withText

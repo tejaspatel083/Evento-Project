@@ -82,6 +82,38 @@
         android:paddingLeft="10dp"
         android:drawablePadding="10dp"
         android:inputType="textPassword"/>
+    <TextView
+        android:id="@+id/visible1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:drawableLeft="@drawable/ic_visibility_black_24dp"
+        android:layout_marginLeft="315dp"
+        android:visibility="invisible"
+        android:layout_marginTop="358dp"/>
+    <TextView
+        android:id="@+id/notvisible1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:drawableLeft="@drawable/ic_visibility_off_black_24dp"
+        android:layout_marginLeft="315dp"
+        android:visibility="invisible"
+        android:layout_marginTop="358dp"/>
+    <TextView
+        android:id="@+id/visible2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:drawableLeft="@drawable/ic_visibility_black_24dp"
+        android:layout_marginLeft="315dp"
+        android:visibility="invisible"
+        android:layout_marginTop="418dp"/>
+    <TextView
+        android:id="@+id/notvisible2"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:drawableLeft="@drawable/ic_visibility_off_black_24dp"
+        android:layout_marginLeft="315dp"
+        android:visibility="invisible"
+        android:layout_marginTop="418dp"/>
     <Button
         android:id="@+id/CreateBtn"
         android:layout_width="150dp"
