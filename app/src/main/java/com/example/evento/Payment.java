@@ -2,7 +2,10 @@ package com.example.evento;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,10 +32,18 @@ public class Payment extends AppCompatActivity {
 
         make_payment_button = findViewById(R.id.make_payment);
 
+        final MediaPlayer mp = MediaPlayer.create(Payment.this, R.raw.click);
+
+
 
         make_payment_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                mp.start();
+
+                Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
+                vb.vibrate(20);
 
                 if (cardnumber.getText().toString().trim().length() == 0 || cardname.getText().toString().trim().length() == 0 || month.getText().toString().trim().length() == 0 || year.getText().toString().trim().length() == 0 || cvvnumber.getText().toString().trim().length() == 0 )
                 {

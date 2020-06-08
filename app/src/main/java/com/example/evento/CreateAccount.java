@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -72,6 +74,7 @@ public class CreateAccount extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,6 +96,10 @@ public class CreateAccount extends AppCompatActivity {
         firebaseStorage = FirebaseStorage.getInstance();
 
         storageReference = firebaseStorage.getReference();
+
+
+        final MediaPlayer mp = MediaPlayer.create(CreateAccount.this, R.raw.click);
+
 
 
         user_pwd1.setOnTouchListener(new View.OnTouchListener() {
@@ -149,6 +156,8 @@ public class CreateAccount extends AppCompatActivity {
 
                 Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
                 vb.vibrate(20);
+
+                mp.start();
 
 
                 if (user_name.getText().toString().trim().length()==0 || user_email.getText().toString().trim().length()==0 || user_pwd1.getText().toString().trim().length()==0 || user_pwd2.getText().toString().trim().length()==0  || imagePath == null)

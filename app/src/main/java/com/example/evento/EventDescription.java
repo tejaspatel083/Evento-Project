@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
@@ -54,6 +55,9 @@ public class EventDescription extends AppCompatActivity implements EventListAdap
         time = findViewById(R.id.eventtime_detail);
         cost = findViewById(R.id.eventcost_detail);
         book_event_button = findViewById(R.id.Book_EventButton);
+
+        final MediaPlayer mp = MediaPlayer.create(EventDescription.this, R.raw.click);
+
 
 
 
@@ -106,6 +110,8 @@ public class EventDescription extends AppCompatActivity implements EventListAdap
             public void onClick(View v) {
                 Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
                 vb.vibrate(20);
+
+                mp.start();
 
                 Intent intent = new Intent(EventDescription.this,BookEvent.class);
                 intent.putExtra("name",name_event);

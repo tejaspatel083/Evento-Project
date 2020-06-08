@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -63,6 +64,9 @@ public class ProfileFragment extends Fragment {
         user_email = view.findViewById(R.id.ProfileEmail);
         btn_update = view.findViewById(R.id.btnupdate);
 
+        final MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.click);
+
+
         DatabaseReference databaseReference = firebaseDatabase.getReference();
         DatabaseReference childreference = databaseReference.child("Users").child(firebaseAuth.getUid());
 
@@ -114,6 +118,7 @@ public class ProfileFragment extends Fragment {
                 Vibrator vb = (Vibrator)   getActivity().getSystemService(Context.VIBRATOR_SERVICE);
                 vb.vibrate(20);
 
+                mp.start();
 
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

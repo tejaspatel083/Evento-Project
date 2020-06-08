@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.text.method.HideReturnsTransformationMethod;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         textView3 = (TextView)findViewById(R.id.notvisible);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        final MediaPlayer mp = MediaPlayer.create(MainActivity.this, R.raw.click);
+
 
         userpassword.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -87,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
                 vb.vibrate(20);
+
+                mp.start();
 
 
                 if (useremail.getText().toString().trim().length() == 0)
@@ -129,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
                 vb.vibrate(20);
+                mp.start();
                 Intent i = new Intent(MainActivity.this,CreateAccount.class);
                 startActivity(i);
 

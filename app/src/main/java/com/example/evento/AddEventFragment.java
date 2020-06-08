@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -63,12 +64,17 @@ public class AddEventFragment extends Fragment {
         btn_addEvent = eventView.findViewById(R.id.Add_EventButton);
 
 
+        final MediaPlayer mp = MediaPlayer.create(getActivity(), R.raw.click);
+
+
         btn_addEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Vibrator vb = (Vibrator)   getActivity().getSystemService(Context.VIBRATOR_SERVICE);
                 vb.vibrate(20);
+
+                mp.start();
 
                 String eventname = event_name.getText().toString().trim();
                 String hostname = host_name.getText().toString().trim();

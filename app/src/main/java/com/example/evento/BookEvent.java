@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
@@ -36,6 +37,8 @@ public class BookEvent extends AppCompatActivity {
         pay_btn = findViewById(R.id.pay_button);
 
 
+
+        final MediaPlayer mp = MediaPlayer.create(BookEvent.this, R.raw.click);
 
 
 
@@ -74,6 +77,8 @@ public class BookEvent extends AppCompatActivity {
 
                 Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
                 vb.vibrate(20);
+
+                mp.start();
 
                 Intent intent = new Intent(BookEvent.this,Payment.class);
                 startActivity(intent);

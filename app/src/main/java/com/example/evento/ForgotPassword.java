@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.Shader;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Gravity;
@@ -38,6 +39,9 @@ public class ForgotPassword extends AppCompatActivity {
         submitbtn = findViewById(R.id.ForgotSubmitBtn);
         firebaseAuth = FirebaseAuth.getInstance();
 
+
+        final MediaPlayer mp = MediaPlayer.create(ForgotPassword.this, R.raw.click);
+
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +50,8 @@ public class ForgotPassword extends AppCompatActivity {
 
                 Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
                 vb.vibrate(20);
+
+                mp.start();
 
                 if(email.length() == 0)
                 {
