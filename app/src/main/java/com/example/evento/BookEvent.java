@@ -3,11 +3,14 @@ package com.example.evento;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class BookEvent extends AppCompatActivity {
 
@@ -15,6 +18,7 @@ public class BookEvent extends AppCompatActivity {
     Button increment_btn,decrement_btn,pay_btn;
     int quantity1=1;
     String str_cost,str_name;
+
 
 
     @Override
@@ -30,6 +34,8 @@ public class BookEvent extends AppCompatActivity {
         decrement_btn = findViewById(R.id.minus_btn);
         inc_dec_textview = findViewById(R.id.inc_dec_text);
         pay_btn = findViewById(R.id.pay_button);
+
+
 
 
 
@@ -59,6 +65,19 @@ public class BookEvent extends AppCompatActivity {
                 vb.vibrate(20);
 
                 increment1();
+            }
+        });
+
+        pay_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Vibrator vb = (Vibrator)   getSystemService(Context.VIBRATOR_SERVICE);
+                vb.vibrate(20);
+
+                Intent intent = new Intent(BookEvent.this,Payment.class);
+                startActivity(intent);
+
             }
         });
 

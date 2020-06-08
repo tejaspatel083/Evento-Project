@@ -1592,6 +1592,8 @@ id btnupdate
 id buttonPanel
 id cancel_action
 id cancel_button
+id card_name
+id card_number
 id center
 id center_horizontal
 id center_vertical
@@ -1613,6 +1615,7 @@ id coordinator
 id custom
 id customPanel
 id cut
+id cvv_number
 id dark
 id date_picker_actions
 id decor_content_parent
@@ -1634,7 +1637,6 @@ id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
-id event_bookbtn
 id event_cost
 id event_hostname
 id event_imageview
@@ -1648,6 +1650,8 @@ id eventtime_detail
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id expiry_month
+id expiry_year
 id fade
 id fill
 id fill_horizontal
@@ -1688,6 +1692,7 @@ id line3
 id listMode
 id list_item
 id logout
+id make_payment
 id masked
 id media_actions
 id message
@@ -1925,6 +1930,7 @@ layout activity_event_description
 layout activity_forgot_password
 layout activity_home_page
 layout activity_main
+layout activity_payment
 layout activity_user__home_page
 layout custom_dialog
 layout design_bottom_navigation_item

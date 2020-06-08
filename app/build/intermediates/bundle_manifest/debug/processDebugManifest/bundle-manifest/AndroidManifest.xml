@@ -28,6 +28,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.evento.Payment" />
         <activity android:name="com.example.evento.BookEvent" />
         <activity android:name="com.example.evento.EventDescription" />
         <activity android:name="com.example.evento.User_HomePage" />

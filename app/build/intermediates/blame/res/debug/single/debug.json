@@ -2472,6 +2472,10 @@
         "source": "C:\\Users\\Tejas\\.gradle\\caches\\transforms-2\\files-2.1\\fb8f7031ef66b8147647717c2aecca12\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Evento\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_payment.xml.flat",
+        "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Evento\\app\\src\\main\\res\\layout\\activity_payment.xml"
+    },
+    {
         "merged": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Evento\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_event_black_24dp.png.flat",
         "source": "C:\\Users\\Tejas\\Desktop\\Evento Project\\Evento\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_event_black_24dp.png"
     },
