@@ -28,10 +28,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.evento.Payment" />
-        <activity android:name="com.example.evento.BookEvent" />
-        <activity android:name="com.example.evento.EventDescription" />
-        <activity android:name="com.example.evento.User_HomePage" />
+        <activity
+            android:name="com.example.evento.Payment"
+            android:label="Payment Page" />
+        <activity
+            android:name="com.example.evento.BookEvent"
+            android:label="Book Event Page" />
+        <activity
+            android:name="com.example.evento.EventDescription"
+            android:label="Event Description Page" />
+        <activity
+            android:name="com.example.evento.User_HomePage"
+            android:label="User Home Page" />
         <activity
             android:name="com.example.evento.HomePage"
             android:label="Home Page" />

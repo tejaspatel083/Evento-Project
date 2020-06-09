@@ -13,10 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Payment"></activity>
-        <activity android:name=".BookEvent" />
-        <activity android:name=".EventDescription" />
-        <activity android:name=".User_HomePage" />
+        <activity android:name=".Payment"
+            android:label="Payment Page"></activity>
+        <activity android:name=".BookEvent"
+            android:label="Book Event Page"/>
+        <activity android:name=".EventDescription"
+            android:label="Event Description Page"/>
+        <activity android:name=".User_HomePage"
+            android:label="User Home Page"/>
         <activity
             android:name=".HomePage"
             android:label="Home Page" />
