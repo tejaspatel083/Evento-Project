@@ -16,6 +16,7 @@
             android:id="@+id/AddEvent"
             android:icon="@drawable/ic_add_circle_black_24dp"
             android:title="Add Event" />
+
     </group>
 
 </menu>

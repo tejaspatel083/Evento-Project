@@ -14,6 +14,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class EventDescription extends AppCompatActivity implements EventListAdapter.AdapterCallback {
 
     private TextView event,host,location,date,time,cost;
@@ -26,6 +29,8 @@ public class EventDescription extends AppCompatActivity implements EventListAdap
     String pass_name,pass_cost;
     int cost_event;
     long id;
+
+    private FirebaseAuth firebaseAuth;
 
     SQLiteDatabase db;
 
@@ -60,6 +65,9 @@ public class EventDescription extends AppCompatActivity implements EventListAdap
 
 
 
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        final FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
         EventDBHelper eventDBHelper = new EventDBHelper(this.getApplicationContext());
         db = eventDBHelper.getWritableDatabase();
@@ -113,12 +121,22 @@ public class EventDescription extends AppCompatActivity implements EventListAdap
 
                 mp.start();
 
-                Intent intent = new Intent(EventDescription.this,BookEvent.class);
-                intent.putExtra("name",name_event);
-                intent.putExtra("cost",String.valueOf(cost_event));
-                //Toast.makeText(EventDescription.this, name_event, Toast.LENGTH_SHORT).show();
-                //Toast.makeText(mContext, cost_event, Toast.LENGTH_SHORT).show();
-                startActivity(intent);
+                String s = firebaseUser.getEmail().toString().trim();
+
+
+                if (s.equalsIgnoreCase("tjp083@gmail.com"))
+                {
+                    Toast.makeText(EventDescription.this, "You are an Admin", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Intent intent = new Intent(EventDescription.this,BookEvent.class);
+                    intent.putExtra("name",name_event);
+                    intent.putExtra("cost",String.valueOf(cost_event));
+                    //Toast.makeText(EventDescription.this, name_event, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(mContext, cost_event, Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
+                }
             }
         });
 

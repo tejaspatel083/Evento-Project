@@ -3,6 +3,7 @@ package com.example.evento;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -52,6 +53,8 @@ public class Payment extends AppCompatActivity {
                 else
                 {
                     Toast.makeText(Payment.this, "Payment Successful", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Payment.this,User_HomePage.class);
+                    startActivity(intent);
                 }
 
 
