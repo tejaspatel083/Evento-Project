@@ -3,10 +3,15 @@ package com.example.evento;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,7 +67,7 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.Even
     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        View view = inflater.inflate(R.layout.eventlist_model,parent,false);
+        final View view = inflater.inflate(R.layout.eventlist_model,parent,false);
 
         return new EventViewHolder(view);
     }
@@ -96,7 +101,6 @@ public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.Even
                 v.getContext().startActivity(intent);
             }
         });
-
 
     }
 

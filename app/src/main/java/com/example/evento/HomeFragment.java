@@ -9,7 +9,10 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,6 +28,9 @@ public class HomeFragment extends Fragment {
     private EventListAdapter mAdapter;
     private SQLiteDatabase mDatabase;
     private RelativeLayout layout;
+    private Spinner event_type;
+    private static final String[] category = {"Select","Sports", "Conference", "Workshop", "Reunion", "Party", "Trade Show","Galas"};
+
 
     @Nullable
     @Override
@@ -37,7 +43,14 @@ public class HomeFragment extends Fragment {
         EventDBHelper eventDBHelper = new EventDBHelper(getActivity());
         mDatabase = eventDBHelper.getWritableDatabase();
 
-        layout = event_View.findViewById(R.id.parent_layout);
+        event_type = event_View.findViewById(R.id.filter_spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item,category);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        event_type.setAdapter(adapter);
+
+
+
 
         RecyclerView recyclerView = event_View.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));

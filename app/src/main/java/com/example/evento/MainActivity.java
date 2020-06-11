@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
             toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
             toast.show();
 
-            if (useremail.getText().toString().equalsIgnoreCase("tjp083@gmail.com"))
+            if (useremail.getText().toString().equalsIgnoreCase("tjp083@gmail.com") || useremail.getText().toString().equalsIgnoreCase("kumarduda31@gmail.com"))
             {
 
                 startActivity(new Intent(MainActivity.this,HomePage.class));
