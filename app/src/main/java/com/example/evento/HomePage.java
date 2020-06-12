@@ -67,6 +67,10 @@ public class HomePage extends AppCompatActivity {
                         fragment = new AddEventFragment();
                         break;
 
+                    case R.id.BookingList :
+                        fragment = new BookingListFragment();
+                        break;
+
                         default:
                             fragment = new HomeFragment();
                             break;

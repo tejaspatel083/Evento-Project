@@ -16,6 +16,10 @@
             android:id="@+id/AddEvent"
             android:icon="@drawable/ic_add_circle_black_24dp"
             android:title="Add Event" />
+        <item
+            android:id="@+id/BookingList"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+            android:title="Booking List" />
 
     </group>
 

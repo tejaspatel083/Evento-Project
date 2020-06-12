@@ -19,6 +19,7 @@ public class BookEvent extends AppCompatActivity {
     Button increment_btn,decrement_btn,pay_btn;
     int quantity1=1;
     String str_cost,str_name;
+    int total;
 
 
 
@@ -81,6 +82,9 @@ public class BookEvent extends AppCompatActivity {
                 mp.start();
 
                 Intent intent = new Intent(BookEvent.this,Payment.class);
+                intent.putExtra("event",str_name);
+                intent.putExtra("tickets",String.valueOf(quantity1));
+                intent.putExtra("total",String.valueOf(total));
                 startActivity(intent);
 
             }
@@ -109,8 +113,8 @@ public class BookEvent extends AppCompatActivity {
 
         inc_dec_textview.setText("" + number);
         int i=Integer.parseInt(str_cost);
-        int l = i*number;
-        book_totalcosttxt.setText("Total: $" + l);
+        total = i*number;
+        book_totalcosttxt.setText("Total: $" + total);
 
     }
 }

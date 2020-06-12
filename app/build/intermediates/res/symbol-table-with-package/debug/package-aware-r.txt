@@ -1499,6 +1499,7 @@ id Add_EventTime
 id BOTTOM_END
 id BOTTOM_START
 id Book_EventButton
+id BookingList
 id CTRL
 id CreateBtn
 id CreateEmail
@@ -1591,6 +1592,11 @@ id blocking
 id book_eventcost
 id book_eventname
 id book_imageview
+id booking_listview
+id bookinglist_email
+id bookinglist_event
+id bookinglist_tickets
+id bookinglist_total
 id bottom
 id btnupdate
 id buttonPanel
@@ -1943,6 +1949,7 @@ layout activity_home_page
 layout activity_main
 layout activity_payment
 layout activity_user__home_page
+layout bookinglist_model
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1961,6 +1968,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout eventlist_model
 layout fragment_addevent
+layout fragment_bookinglist
 layout fragment_home
 layout fragment_profile
 layout mtrl_alert_dialog
