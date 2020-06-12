@@ -70,7 +70,7 @@ public class Payment extends AppCompatActivity {
                     reference.setValue(bookingListGetterSetter);
 
 
-                    Toast.makeText(Payment.this, "Payment Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Payment.this, "Event Booked", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Payment.this,User_HomePage.class);
                     startActivity(intent);
                 }
