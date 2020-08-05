@@ -174,6 +174,8 @@ public class CreateAccount extends AppCompatActivity {
                     password = user_pwd1.getText().toString().trim();
                     repassword = user_pwd2.getText().toString().trim();
 
+
+
                     firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -233,6 +235,7 @@ public class CreateAccount extends AppCompatActivity {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         if (firebaseUser != null)
         {
+
             firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
@@ -268,6 +271,11 @@ public class CreateAccount extends AppCompatActivity {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference reference = firebaseDatabase.getReference().child("Users").child(firebaseAuth.getUid());
 
+
+
+        UserProfile userProfile = new UserProfile(email,name);
+        reference.setValue(userProfile);
+
         StorageReference imageReference = storageReference.child("User Profile Images").child(firebaseAuth.getUid());
         UploadTask uploadTask = imageReference.putFile(imagePath);
         uploadTask.addOnFailureListener(new OnFailureListener() {
@@ -288,9 +296,6 @@ public class CreateAccount extends AppCompatActivity {
 
             }
         });
-
-        UserProfile userProfile = new UserProfile(email,name);
-        reference.setValue(userProfile);
 
 
     }

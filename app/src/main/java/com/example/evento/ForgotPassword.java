@@ -55,7 +55,7 @@ public class ForgotPassword extends AppCompatActivity {
 
                 if(email.length() == 0)
                 {
-                    Toast toast = Toast.makeText(ForgotPassword.this,"Please Enter Email",Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(ForgotPassword.this,"Please Enter Your Email",Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL,0,0);
                     toast.show();
                 }

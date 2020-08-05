@@ -196,7 +196,6 @@ public class MainActivity extends AppCompatActivity {
         if (emailflag)
         {
             progressDialog.dismiss();
-            //Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG).show();
             Toast toast = Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG);
             toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
             toast.show();
